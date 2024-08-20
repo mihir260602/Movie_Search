@@ -8,6 +8,66 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
+# Custom CSS for the Streamlit app
+st.markdown("""
+    <style>
+    /* Background color and text styling */
+    body {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+
+    /* Streamlit title style */
+    .stApp .stTitle {
+        color: #ff6347;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    /* Subheader styling */
+    .stApp .stSubheader {
+        color: #ffa07a;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    /* Input box style */
+    .stTextInput > div > div > input {
+        background-color: #2e2e2e;
+        color: #ffffff;
+        border: 1px solid #ffa07a;
+        border-radius: 5px;
+    }
+
+    /* Button styling */
+    .stButton button {
+        background-color: #ff6347;
+        color: #ffffff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+    }
+
+    /* Button hover effect */
+    .stButton button:hover {
+        background-color: #ffa07a;
+        color: #1e1e1e;
+    }
+
+    /* Answer box styling */
+    .stApp .stMarkdown {
+        background-color: #2e2e2e;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ffa07a;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Streamlit app title
 st.title("Graph Database Question Answering")
 
